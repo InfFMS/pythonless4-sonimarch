@@ -4,3 +4,13 @@
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
 
+def f(n):
+    if n == 1:
+        return 'YES'
+    elif n % 2 == 1:
+        return 'NO'
+    else:
+        return f(n // 2)
+
+
+print(f(int(input())))

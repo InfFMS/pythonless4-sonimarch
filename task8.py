@@ -7,3 +7,16 @@
 # Вывод:
 # 2*3*3*3*7
 
+def f(n):
+    cnt = 2
+    s =[]
+    while n > 1:
+        if n % cnt == 0:
+            n //= cnt
+            s.append(str(cnt))
+        else:
+            cnt += 1
+
+    return '*'.join(s)
+
+print(f(int(input())))
