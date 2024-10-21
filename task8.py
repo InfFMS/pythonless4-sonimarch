@@ -7,3 +7,11 @@
 # Вывод:
 # 2*3*3*3*7
 
+def num(n):
+    for i in range(2, n + 1):
+        if n % i == 0 and i < n:
+            print(i, end='*')
+            return num(n // i)
+    print(n)
+
+num(378)

@@ -12,3 +12,18 @@
 # Объедините эти две подзадачи, получите ответ.
 
 
+
+def f(n, fro):
+    s = ''
+    if n > 0:
+        s += str(n % fro)
+        return f(n // fro, fro)
+
+print(f(int(input()), int(input())))
+
+
+'''def convert_base(num, from_base, to_base):
+    d = 0
+    for i in range(num - 1, 0, -1):
+        d += num[i] * (from_base ** i)
+    '''
