@@ -7,16 +7,11 @@
 # Вывод:
 # 2*3*3*3*7
 
-def f(n):
-    cnt = 2
-    s =[]
-    while n > 1:
-        if n % cnt == 0:
-            n //= cnt
-            s.append(str(cnt))
-        else:
-            cnt += 1
+def num(n):
+    for i in range(2, n + 1):
+        if n % i == 0 and i < n:
+            print(i, end='*')
+            return num(n // i)
+    print(n)
 
-    return '*'.join(s)
-
-print(f(int(input())))
+num(378)

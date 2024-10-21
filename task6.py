@@ -6,12 +6,14 @@
 
 def f(g):
     a, b = map(int, g. split())
-    mi = min(a, b)
-    ma = max(a, b)
-    for i in range(2, mi + 1):
+    i = 2
+    while i <= min(a, b):
         if a % i == 0 and b % i == 0:
             a //= i
             b //= i
+        else:
+            i += 1
+
     return a, b
 
 print(f(input()))
